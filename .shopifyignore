@@ -1,1 +1,12 @@
-node_modules
+.gitignore
+.prettierignore
+
+package.json
+package-lock.json
+
+postcss.config.js
+tailwind.config.js
+
+\_css/tailwind.css
+
+README.md

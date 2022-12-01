@@ -1,0 +1,25 @@
+{
+  "name": "quilto-dev",
+  "version": "1.0.0",
+  "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i ./_css/tailwind.css -o ./assets/tailwind.css",
+    "dev:watch": "tailwindcss -i ./_css/tailwind.css -o ./assets/tailwind.css --watch",
+    "build": "tailwindcss -i ./_css/tailwind.css -o ./assets/tailwind.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sooom1627/quilto-dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sooom1627/quilto-dev/issues"
+  },
+  "homepage": "https://github.com/sooom1627/quilto-dev#readme"
+}
