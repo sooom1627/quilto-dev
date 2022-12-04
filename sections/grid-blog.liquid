@@ -1,17 +1,91 @@
-{{ 'bs.min.css' | asset_url | stylesheet_tag }}
+<style>
+  .feature-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
 
-<div>
-  <div class="">
-    <h1 class="tw-font-bold">STORY</h1>
-    <p>クリエイターとQUILTO</p>
+<div class="page-width">
+  <div class="tw-bg-white">
+    <div>
+      <h1>STORY</h1>
+      <p>アーティストの想い</p>
+    </div>
+    <div class="tw-columns-sm tw-gap-y-5 tw-gap-x-5">
+      <div class="tw-break-inside-avoid-column tw-column">
+        <a href="#" class="group ">
+          <div class="aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
+              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
+              loading="lazy"
+              height="auto"
+              width="auto"
+            >
+          </div>
+          <h3 class="tw-mt-4 tw-text-sm tw-text-gray-700">Earthen Bottle</h3>
+          <p class="tw-mt-1 tw-text-lg tw-font-medium tw-text-gray-900">$48</p>
+        </a>
+      </div>
+      <div class="tw-break-inside-avoid-column tw-column">
+        <a href="#" class="group tw-break-inside-avoid-column">
+          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg"
+              alt="Olive drab green insulated bottle with flared screw lid and flat top."
+              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
+              loading="lazy"
+              height="auto"
+              width="auto"
+            >
+          </div>
+          <h3 class="tw-mt-4 tw-text-sm tw-text-gray-700">Nomad Tumbler</h3>
+          <p class="tw-mt-1 tw-text-lg tw-font-medium tw-text-gray-900">$35</p>
+        </a>
+      </div>
+      <div class="tw-break-inside-avoid-column tw-column">
+        <a href="#" class="group tw-break-inside-avoid-column">
+          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg"
+              alt="Person using a pen to cross a task off a productivity paper card."
+              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
+              loading="lazy"
+              height="auto"
+              width="auto"
+            >
+          </div>
+          <h3 class="tw-mt-4 tw-text-sm tw-text-gray-700">Focus Paper Refill</h3>
+          <p class="tw-mt-1 tw-text-lg tw-font-medium tw-text-gray-900">$89</p>
+        </a>
+      </div>
+      <div class="tw-break-inside-avoid-column tw-column">
+        <a href="#" class="group tw-break-inside-avoid-column">
+          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
+              loading="lazy"
+              height="auto"
+              width="auto"
+            >
+          </div>
+          <h3 class="tw-mt-4 tw-text-sm tw-text-gray-700">Machined Mechanical Pencil</h3>
+          <p class="tw-mt-1 tw-text-lg tw-font-medium tw-text-gray-900">$35</p>
+        </a>
+      </div>
+
+      <!-- More products... -->
+    </div>
   </div>
-  <div></div>
 </div>
 
 {% schema %}
 {
   "name": "記事一覧",
-  "class": "page-width",
   "settings": [],
   "blocks": [],
   "presets": [
