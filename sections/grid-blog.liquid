@@ -13,87 +13,24 @@
       <p class="tw-text-center tw-my-1">アーティストの想い</p>
     </div>
     <div class="tw-columns-md tw-gap-y-5 tw-gap-x-5">
-      <div class="tw-break-inside-avoid-column tw-column">
-        <a href="#" class="group ">
-          <div class="aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 ">
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
-              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
-              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
-              loading="lazy"
-              height="auto"
-              width="auto"
-            >
-          </div>
-        </a>
-        <h3 class="tw-my-2 tw-text-xl tw-text-gray-700">Earthen Bottle</h3>
-        <p class="tw-mt-0 tw-text-lg tw-font-medium tw-text-gray-900">2022.12.4</p>
-      </div>
-      <div class="tw-break-inside-avoid-column tw-column">
-        <a href="#" class="group tw-break-inside-avoid-column">
-          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg"
-              alt="Olive drab green insulated bottle with flared screw lid and flat top."
-              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
-              loading="lazy"
-              height="auto"
-              width="auto"
-            >
-          </div>
-        </a>
-        <h3 class="tw-my-2 tw-text-xl tw-text-gray-700">Nomad Tumbler</h3>
-        <p class="tw-mt-0 tw-text-lg tw-font-medium tw-text-gray-900">2022.12.1</p>
-      </div>
-      <div class="tw-break-inside-avoid-column tw-column">
-        <a href="#" class="group tw-break-inside-avoid-column">
-          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-            <img
-              src="https://www.apartamentomagazine.com/wp-content/uploads/2022/11/Solange-Knowles-Apartamento-magazine-issue-30_00020.jpg"
-              alt="Person using a pen to cross a task off a productivity paper card."
-              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
-              loading="lazy"
-              height="auto"
-              width="auto"
-            >
-          </div>
-        </a>
-        <h3 class="tw-my-2 tw-text-xl tw-text-gray-700">Focus Paper Refill</h3>
-        <p class="tw-mt-0 tw-text-lg tw-font-medium tw-text-gray-900">2022.11.31</p>
-      </div>
-      <div class="tw-break-inside-avoid-column tw-column">
-        <a href="#" class="group tw-break-inside-avoid-column">
-          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg"
-              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
-              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
-              loading="lazy"
-              height="auto"
-              width="auto"
-            >
-          </div>
-        </a>
-        <h3 class="tw-my-2 tw-text-xl tw-text-gray-700">Machined Mechanical Pencil</h3>
-        <p class="tw-mt-0 tw-text-lg tw-font-medium tw-text-gray-900">2022.11.15</p>
-      </div>
-      <div class="tw-break-inside-avoid-column tw-column">
-        <a href="#" class="group tw-break-inside-avoid-column">
-          <div class="tw-break-inside-avoid-column aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-            <img
-              src="https://www.apartamentomagazine.com/wp-content/uploads/2022/08/Yto-barrada-apartamento-magazine-00040-1-768x1024.jpg"
-              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
-              class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
-              loading="lazy"
-              height="auto"
-              width="auto"
-            >
-          </div>
-        </a>
-        <h3 class="tw-my-2 tw-text-xl tw-text-gray-700">Machined Mechanical Pencil</h3>
-        <p class="tw-mt-0 tw-text-lg tw-font-medium tw-text-gray-900">2022.11.6</p>
-      </div>
-
+      {%- for article in blog.articles -%}
+        <div class="tw-break-inside-avoid-column tw-column">
+          <a href="{{ article.url }}" class="group ">
+            <div class="aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 ">
+              <img
+                src="{{ article.image.src | image_url }}"
+                alt="{{ article.image.src.alt | escape }}"
+                class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
+                loading="lazy"
+                height="auto"
+                width="auto"
+              >
+            </div>
+          </a>
+          <h3 class="tw-my-2 tw-text-xl tw-text-gray-700">{{ article.title }}</h3>
+          <p class="tw-mt-0 tw-text-lg tw-font-medium tw-text-gray-900">{{ article.published_at | time_tag: format: 'date' }}</p>
+        </div>
+      {% endfor %}
       <!-- More products... -->
     </div>
   </div>
