@@ -1,3 +1,8 @@
+.tw-my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
 .tw-my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem
@@ -6,23 +11,6 @@
 .tw-my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem
-}
-
-.tw-my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem
-}
-
-.tw-mt-4 {
-  margin-top: 1rem
-}
-
-.tw-mt-1 {
-  margin-top: 0.25rem
-}
-
-.tw-mt-2 {
-  margin-top: 0.5rem
 }
 
 .tw-mt-0 {
@@ -35,11 +23,6 @@
 
 .tw-w-full {
   width: 100%
-}
-
-.tw-columns-sm {
-  -moz-columns: 24rem;
-       columns: 24rem
 }
 
 .tw-columns-md {
@@ -74,11 +57,6 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.tw-bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity))
-}
-
 .tw-object-cover {
   -o-object-fit: cover;
      object-fit: cover
@@ -93,9 +71,9 @@
   text-align: center
 }
 
-.tw-text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem
+.tw-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
 }
 
 .tw-text-lg {
@@ -103,22 +81,12 @@
   line-height: 1.75rem
 }
 
-.tw-text-base {
-  font-size: 1rem;
-  line-height: 1.5rem
-}
-
-.tw-text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
+.tw-font-bold {
+  font-weight: 700
 }
 
 .tw-font-medium {
   font-weight: 500
-}
-
-.tw-font-bold {
-  font-weight: 700
 }
 
 .tw-text-gray-700 {

@@ -16,11 +16,11 @@
       {%- for article in blog.articles -%}
         <div class="tw-break-inside-avoid-column tw-column">
           <a href="{{ article.url }}" class="group ">
-            <div class="aspect-w-1 aspect-h-1 tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-gray-200 ">
+            <div class="tw-w-full tw-overflow-hidden tw-rounded-lg">
               <img
                 src="{{ article.image.src | image_url }}"
                 alt="{{ article.image.src.alt | escape }}"
-                class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75"
+                class="tw-h-full tw-w-full tw-object-cover tw-object-center group-hover:tw-opacity-75 tw-rounded-lg"
                 loading="lazy"
                 height="auto"
                 width="auto"
