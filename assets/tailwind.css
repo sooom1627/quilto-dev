@@ -3,9 +3,9 @@
   margin-bottom: 1rem
 }
 
-.tw-my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem
+.tw-my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px
 }
 
 .tw-my-1 {
@@ -13,24 +13,9 @@
   margin-bottom: 0.25rem
 }
 
-.tw-my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px
-}
-
-.tw-my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem
-}
-
-.tw-mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem
-}
-
-.tw-mx-9 {
-  margin-left: 2.25rem;
-  margin-right: 2.25rem
+.tw-my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
 }
 
 .tw-mx-20 {
@@ -54,12 +39,8 @@
   margin-right: 0.25rem
 }
 
-.tw-mt-0 {
-  margin-top: 0px
-}
-
-.tw-block {
-  display: block
+.tw-mb-2 {
+  margin-bottom: 0.5rem
 }
 
 .tw-flex {
@@ -90,9 +71,9 @@
   flex-shrink: 0
 }
 
-.tw-columns-md {
-  -moz-columns: 28rem;
-       columns: 28rem
+.tw-columns-2 {
+  -moz-columns: 2;
+       columns: 2
 }
 
 .tw-break-inside-avoid-column {
@@ -148,19 +129,9 @@
   text-align: center
 }
 
-.tw-text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem
-}
-
-.tw-text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
-}
-
-.tw-text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem
+.tw-text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem
 }
 
 .tw-text-sm {
@@ -168,14 +139,29 @@
   line-height: 1.25rem
 }
 
+.tw-text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem
+}
+
 .tw-text-base {
   font-size: 1rem;
   line-height: 1.5rem
 }
 
-.tw-text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem
+.tw-text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
+.tw-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+.tw-text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem
 }
 
 .tw-text-4xl {
@@ -216,15 +202,6 @@
   font-weight: 500
 }
 
-.tw-leading-normal {
-  line-height: 1.5
-}
-
-.tw-text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity))
-}
-
 .tw-text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity))
@@ -238,6 +215,11 @@
 .tw-text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity))
+}
+
+.tw-text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity))
 }
 
 .tw-group:hover .group-hover\:tw-opacity-75 {
@@ -263,8 +245,13 @@
     width: 75%
   }
 
-  .lg\:tw-text-6xl {
-    font-size: 3.75rem;
-    line-height: 1
+  .lg\:tw-columns-3 {
+    -moz-columns: 3;
+         columns: 3
+  }
+
+  .lg\:tw-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem
   }
 }
