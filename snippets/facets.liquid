@@ -45,9 +45,9 @@
             {% endif %}
           >
             {%- if filter_type == 'horizontal' and results.filters != empty -%}
-              <h2 class="facets__heading caption-large text-body" id="verticalTitle" tabindex="-1">
+              <p class="facets__heading caption-large text-body" id="verticalTitle" tabindex="-1">
                 {{ 'products.facets.filter_by_label' | t }}
-              </h2>
+              </p>
             {%- endif -%}
             {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
             {%- if filter_type == 'vertical' -%}
@@ -649,7 +649,7 @@
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <span>{{ filter.label | escape }}</span>
+                            <span class="tw-text-sm">{{ filter.label | escape }}</span>
                             <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
@@ -727,16 +727,17 @@
                           </ul>
 
                           <div class="no-js-hidden mobile-facets__footer gradient">
-                            <facet-remove class="mobile-facets__clear-wrapper">
-                              <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
-                                {{- 'products.facets.clear' | t -}}
-                              </a>
-                            </facet-remove>
                             <button
                               type="button"
                               class="no-js-hidden button button--primary"
                               onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                             >
+                              <facet-remove class="mobile-facets__clear-wrapper">
+                                <a href="{{ results_url }}" class="mobile-facets__clear underlined-link tw-text-sm">
+                                  {{- 'products.facets.clear' | t -}}
+                                </a>
+                              </facet-remove>
+
                               {{ 'products.facets.apply' | t }}
                             </button>
                             <noscript
@@ -755,7 +756,7 @@
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <span>{{ filter.label | escape }}</span>
+                            <span class="tw-text-sm">{{ filter.label | escape }}</span>
                             <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
@@ -837,11 +838,6 @@
                             </div>
                           </price-range>
                           <div class="no-js-hidden mobile-facets__footer">
-                            <facet-remove class="mobile-facets__clear-wrapper">
-                              <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
-                                {{- 'products.facets.clear' | t -}}
-                              </a>
-                            </facet-remove>
                             <button
                               type="button"
                               class="no-js-hidden button button--primary"
@@ -849,6 +845,11 @@
                             >
                               {{ 'products.facets.apply' | t }}
                             </button>
+                            <facet-remove class="mobile-facets__clear-wrapper">
+                              <a href="{{ results_url }}" class="mobile-facets__clear underlined-link tw-text-sm">
+                                {{- 'products.facets.clear' | t -}}
+                              </a>
+                            </facet-remove>
                             <noscript
                               ><button class="button button--primary">
                                 {{ 'products.facets.apply' | t }}
@@ -868,11 +869,11 @@
                 >
                   <div class="mobile-facets__summary">
                     <div class="mobile-facets__sort">
-                      <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
+                      <label for="SortBy-mobile" class="tw-text-sm">{{ 'products.facets.sort_by_label' | t }}</label>
                       <div class="select">
                         <select
                           name="sort_by"
-                          class="select__select"
+                          class="select__select tw-text-sm"
                           id="SortBy-mobile"
                           aria-describedby="a11y-refresh-page-message"
                         >
@@ -895,11 +896,6 @@
               {%- endif -%}
 
               <div class="mobile-facets__footer">
-                <facet-remove class="mobile-facets__clear-wrapper">
-                  <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
-                    {{- 'products.facets.clear_all' | t -}}
-                  </a>
-                </facet-remove>
                 <button
                   type="button"
                   class="no-js-hidden button button--primary"
@@ -907,6 +903,11 @@
                 >
                   {{ 'products.facets.apply' | t }}
                 </button>
+                <facet-remove class="mobile-facets__clear-wrapper">
+                  <a href="{{ results_url }}" class="mobile-facets__clear underlined-link tw-text-xs tw-mt-2">
+                    {{- 'products.facets.clear_all' | t -}}
+                  </a>
+                </facet-remove>
                 <noscript
                   ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
                 >
