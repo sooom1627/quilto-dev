@@ -32,6 +32,7 @@
 	margin: 0;
 	word-break: break-word;
 	font-size: 0.825rem;
+	font-weight: bold;
 }
 
 .accordion .icon-accordion {
@@ -55,4 +56,8 @@
 
 .accordion__content img {
 	max-width: 100%;
+}
+
+.accordion__content p {
+	font-size: 0.825rem;
 }
