@@ -10,7 +10,7 @@
   <div class="tw-bg-white">
     <div class="tw-columns-2 lg:tw-columns-3 tw-gap-y-5 tw-gap-x-5">
       {%- for article in blog.articles -%}
-        <div class="tw-break-inside-avoid-column tw-column">
+        <div class="tw-break-inside-avoid-column tw-column tw-mb-4">
           <a href="{{ article.url }}" class="group ">
             <div class="tw-w-full tw-overflow-hidden tw-rounded-lg">
               <img
@@ -23,8 +23,8 @@
               >
             </div>
           </a>
-          <div class="tw-mb-2">
-            <p class="tw-text-sm lg:tw-text-base tw-text-gray-700">{{ article.title }}</p>
+          <div class="tw-mb-2" style="margin-bottom:-4px">
+            <p class="tw-text-xs tw-font-bold tw-text-gray-700">{{ article.title }}</p>
             <p class="tw-text-xs tw-font-medium tw-text-gray-600">
               {{ article.published_at | time_tag: format: 'date' }}
             </p>
