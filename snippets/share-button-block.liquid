@@ -20,11 +20,11 @@
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
       {% render 'icon-share' %}
-      {{ block.settings.share_label | escape }}
+      <p class="tw-text-sm">{{ block.settings.share_label | escape }}</p>
     </summary>
     <div class="share-button__fallback motion-reduce">
       <div class="field">
-        <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status"> </span>
+        <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden tw-text-sm" role="status"> </span>
         <input
           type="text"
           class="field__input"
@@ -33,8 +33,11 @@
           placeholder="{{ 'general.share.share_url' | t }}"
           onclick="this.select();"
           readonly
+          style="font-size:0.825rem"
         >
-        <label class="field__label" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
+        <label class="field__label" for="ShareUrl-{{ section.id }}"
+          ><span class="tw-text-sm">{{ 'general.share.share_url' | t }}</span></label
+        >
       </div>
       <button class="share-button__close hidden no-js-hidden">
         {% render 'icon-close' %}
