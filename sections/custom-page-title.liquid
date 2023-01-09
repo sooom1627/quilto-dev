@@ -1,0 +1,32 @@
+<div class="tw-my-4">
+  <h1 class="tw-text-center tw-font-bold tw-my-1 tw-text-2xl">{{ section.settings.title }}</h1>
+  <p class="tw-text-center tw-text-sm tw-my-1">{{ section.settings['sub-title'] }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "ページタイトル",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "ja": "タイトル"
+      }
+    },
+    {
+      "type": "text",
+      "id": "sub-title",
+      "label": {
+        "ja": "サブタイトル"
+      }
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "ページタイトル"
+    }
+  ]
+}
+{% endschema %}
